@@ -1,1 +1,1 @@
-# TFG---Redes-neuronales-aplicadas-a-la-mec-nica-de-fluidos
+# TFG---Redes-neuronales-aplicadas-a-la-mecanica-de-fluidos
