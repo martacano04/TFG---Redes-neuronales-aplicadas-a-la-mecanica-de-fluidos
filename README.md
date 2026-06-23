@@ -1,4 +1,4 @@
-# TFG---Redes-neuronales-aplicadas-a-la-mecanica-de-fluidos
+# TFG - Redes neuronales aplicadas a la mecánica de fluidos
 
 En este repositorio se encuentra el código escrito para el Trabajo de Fin de Grado "Redes neuronales aplicadas a la mecánica de fluidos.
 
