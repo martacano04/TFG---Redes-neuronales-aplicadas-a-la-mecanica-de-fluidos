@@ -12,24 +12,20 @@ import json
 def get_args():
     parser = argparse.ArgumentParser(description="PINN Self-Similar Refactor")
     
-    # Parámetros Físicos
     parser.add_argument("--lambda_", type=float, default=0.4)
     parser.add_argument("--L", type=float, default=2.0)
     parser.add_argument("--p", type=int, default=3)
     parser.add_argument("--N", type=int, default=2000, help="Puntos de colocación")
     
-    # Arquitectura
     parser.add_argument("--neurons", type=int, default=20)
     parser.add_argument("--layers", type=int, default=3)
     
-    # Entrenamiento
     parser.add_argument("--epochs", type=int, default=300000)
     parser.add_argument("--k_bc", type=float, default=0.01)
     parser.add_argument("--lr_init", type=float, default=0.001)
     parser.add_argument("--n_smooth", type=int, default=400, help="Número de puntos centrales para f'''")
     parser.add_argument("--k_smooth", type=float, default=1e-6, help="Peso del smoothness loss")
     
-    # Directorios
     parser.add_argument("--results_dir", type=str, default="results")
     
     parser.add_argument("--seed", type=int, default=42)
