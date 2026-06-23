@@ -14,4 +14,8 @@ El repositorio está estructurado en 5 carpetas:
 
 **`pinn_de_gregorio_second_sol/`** contiene el modelo para la búsqueda de la segunda solución de la ecuación de De Gregorio autosimilar.
 
-
+Dentro de las 4 últimas carpetas, la simulación se divide en distintos documentos de la siguiente manera: 
+* **`models.py`**: Contiene la arquitectura de la red neuronal (*fully-connected*) y la capa de post-procesamiento encargada de forzar las condiciones de simetría analítica (imparidad) de los perfiles buscados.
+* **`loss.py`**: Define la función de pérdida del sistema, calculando mediante diferenciación automática (`torch.autograd`) el residuo de la ecuación diferencial correspondiente (Burgers o De Gregorio) en los puntos de colocalización, junto con la penalización de las condiciones de contorno.
+* **`utils.py`**: Reúne las funciones auxiliares de soporte matemático, como el cálculo de las soluciones exactas asintóticas para la validación del error y la rutina de generación de gráficos.
+* **`main.py`**: Script principal que actúa como director de orquesta. Inicializa los hiperparámetros del modelo (malla de puntos, pesos de las pérdidas, número de épocas), gestiona los bucles de optimización (Adam, esquemas de *learning rate decay* y refinamiento mediante L-BFGS) y exporta los resultados finales.
